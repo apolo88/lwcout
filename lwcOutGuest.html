@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    Lightning out Test Page
+    
+    <script src="https://ene2022-cloudgaiaproject.cs214.force.com/outtvisualforce/lightning/lightning.out.js"></script>
+    <div id="lightningLocator"></div>
+
+    <script>
+      $Lightning.use(
+        "c:lightningwrapper", // name of the Lightning app
+        function () {
+          // Callback once framework and app loaded
+          $Lightning.createComponent(
+            "c:comp", // top-level component of your app
+            {}, // attributes to set on the component when created
+            "lightningLocator", // the DOM location to insert the component
+            function (cmp) {
+              // callback when component is created and active on the page
+            }
+          );
+        },
+        "https://ene2022-cloudgaiaproject.cs214.force.com/outt" // Experience Cloud site endpoint
+      );
+    </script>
+  </body>
+</html>
